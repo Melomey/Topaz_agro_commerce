@@ -1,0 +1,32 @@
+.new-item {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    margin: auto;
+    background:linear-gradient(to bottom, rgb(11, 37, 0), rgb(51, 172, 15)) ;
+}
+
+.new-item-text {
+    padding: 50px;
+    color: white;
+    width: 60%;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.text h3 {
+    padding: 14px 0;
+    color: greenyellow;
+}
+
+.text p {
+    
+}
+
+.img {
+    width: 50%;
+    height: 50%;
+    margin: 30px;
+    border: 4px solid white;
+    border-radius: 15px;
+}
