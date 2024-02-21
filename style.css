@@ -77,7 +77,7 @@ footer {
   }
   .container{
     width: 100%;
-    background: #193B51;
+    background: linear-gradient(rgb(11, 37, 0), rgb(51, 172, 15));
     border-radius: 6px;
     padding: 20px 60px 30px 40px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -113,7 +113,7 @@ footer {
   }
   .content .left-side .details i{
     font-size: 30px;
-    color: #3e2093;
+    color: yellowgreen;
     margin-bottom: 10px;
   }
   .content .left-side .details .topic{
@@ -168,12 +168,12 @@ footer {
     border: none;
     padding: 8px 16px;
     border-radius: 6px;
-    background: #3e2093;
+    background: yellowgreen;
     cursor: pointer;
     transition: all 0.3s ease;
   }
   .button input[type="button"]:hover{
-    background: #5029bc;
+    background: rgb(119, 65, 3);
   }
   @media (max-width: 950px) {
     .container{
