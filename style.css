@@ -1,0 +1,26 @@
+
+
+.pruduct-category {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 32px;
+    }
+
+.test {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 24px;
+        grid-row-gap: px;
+    }
+#img{
+    size: 50%;
+    border-radius: 8px;
+}
+.testimonial-card1{
+    padding: 10px;
+    margin:auto;
+}
+
