@@ -1,28 +1,150 @@
 
+/* Colors
+Greens - #4CB050  , #0E6810 , #66AB36
+Yellow - #F3C82E , #F1C21A , #F1BB00
+Brown - #F8E0C2 , */
+
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
 
 .pruduct-category {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 24px;
-    grid-row-gap: 32px;
-    }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 32px;
+}
 
 .test {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 24px;
-        grid-row-gap: px;
-    }
-#img{
-    size: 50%;
-    border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: px;
 }
-.testimonial-card1{
-    padding: 10px;
-    margin:auto;
+#img {
+  size: 50%;
+  border-radius: 8px;
 }
+.testimonial-card1 {
+  padding: 10px;
+  margin: auto;
+}
+
+/* *******
+Navigation
+******** */
+.header {
+  background-image: url(/Topaz_agro_commerce/assets/Agro_images/grassfield.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.logo img {
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.main-nav {
+  height: 80px;
+  width: 100%;
+}
+
+.main-nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+.main-nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 20px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.main-nav-list  a {
+  border: 2px solid black;
+}
+
+/* ******
+About section
+******** */
+.about {
+  min-height: 20px;
+  padding-right: 15px;
+  padding-right: 15px;
+  width: 50%;
+  margin: auto;
+  line-height: 35px;
+  text-align: center;
+}
+
+.about-text {
+  margin-top: 50px;
+}
+
+.about-text h2 {
+  margin-bottom: 50px;
+  color: #045727;
+  font-size: x-large;
+}
+
+.customer-items {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+.customer-imgs {
+  display: flex;
+}
+
+.customer-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid rgb(147, 158, 131);
+}
+
+.customer-imgs img:last-child {
+  margin: 0;
+}
+
+.customer-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.customer-text span {
+  color: #2e5304;
+  font-weight: 700;
+}
+
+.customers {
+  margin-bottom: 30px;
+}
+
+
+/* ******
+End of about section
+******* */
 
 .new-item-1 {
     display: flex;
@@ -232,3 +354,4 @@ footer {
      width: 100%;
      margin-left: 0;
     }
+
