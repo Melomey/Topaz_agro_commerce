@@ -5,7 +5,9 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 24px;
-    grid-row-gap: 32px;
+    grid-row-gap: 24px;
+    
+    
     }
 
 .test {
@@ -19,8 +21,35 @@
     size: 50%;
     border-radius: 8px;
 }
-.testimonial-card1{
+.testimonials-card1{
     padding: 10px;
     margin:auto;
+    border: 0cm;
+    border-color: rgb(78, 76, 76);
+    background-color: rgb(243, 243, 226);
+    border-radius: 12px;
 }
 
+.testimonials-card2{
+border-radius: 12px;
+box-shadow: 12px;
+background-color: rgb(243, 243, 226);
+padding: 20px;
+
+
+}
+
+.testimonials-card3{
+    padding: 10px;
+    margin:auto;
+    border: 0cm;
+    border-color: rgb(78, 76, 76);
+    background-color: rgb(243, 243, 226);
+    border-radius: 12px;
+}
+#name-img{
+    border-radius: 50%;
+    height:50px;
+    width: 50px;
+    padding-right: 10px;
+}
