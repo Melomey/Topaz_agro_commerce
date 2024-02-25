@@ -5,38 +5,12 @@ Yellow - #F3C82E , #F1C21A , #F1BB00
 Brown - #F8E0C2 , */
 
 
-
-
 * {
   padding: 0;
   margin: 0;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
-}
-
-.pruduct-category {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 24px;
-  grid-row-gap: 32px;
-}
-
-.test {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 24px;
-  grid-row-gap: px;
-}
-#img {
-  size: 50%;
-  border-radius: 8px;
-}
-.testimonial-card1 {
-  padding: 10px;
-  margin: auto;
 }
 
 /* *******
@@ -264,6 +238,13 @@ footer {
     margin-top: 15px;
     position: relative;
   }
+  
+  .btn{
+    padding:10px;
+    border-radius: 4px;
+    border: none;
+  }
+
   .content .left-side::before{
     content: '';
     position: absolute;
@@ -378,4 +359,69 @@ footer {
      margin-left: 0;
     }
 
+
+
+  /* Start of Products And Testimonials section*/
+.Products-section{
+padding: 40px;
+
+}
+
+.pruduct-category {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  
+  
   }
+
+.testimonials{
+  padding:40px;
+}
+.test {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+  }
+#img{
+  size: 50%;
+  border-radius: 8px;
+}
+.testimonials-card1{
+  padding: 10px;
+  margin:auto;
+  border: 0cm;
+  border-color: rgb(78, 76, 76);
+  background-color: rgb(243, 243, 226);
+  border-radius: 12px;
+}
+
+.testimonials-card2{
+border-radius: 12px;
+box-shadow: 12px;
+background-color: rgb(243, 243, 226);
+padding: 20px;
+
+
+}
+
+.testimonials-card3{
+  padding: 10px;
+  margin:auto;
+  border: 0cm;
+  border-color: rgb(78, 76, 76);
+  background-color: rgb(243, 243, 226);
+  border-radius: 12px;
+}
+#name-img{
+  border-radius: 50%;
+  height:50px;
+  width: 50px;
+  padding-right: 10px;
+}
+/* End of Products And Testimonials section */
+
