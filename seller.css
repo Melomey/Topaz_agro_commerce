@@ -1,0 +1,29 @@
+/* .sellercatalogue {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: px;
+    } */
+
+    .main-nav{
+        background-color: #4CB050;
+    }
+    .logo{
+        height: 10%;
+    }
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        border-left: none;
+        border-right: none;
+        text-align: center;
+      }
+      

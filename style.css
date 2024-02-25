@@ -11,6 +11,7 @@ Brown - #F8E0C2 , */
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* *******
@@ -347,7 +348,7 @@ padding: 40px;
 .pruduct-category {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 24px;
   grid-row-gap: 24px;
   
@@ -394,10 +395,18 @@ padding: 20px;
   background-color: rgb(243, 243, 226);
   border-radius: 12px;
 }
-#name-img{
+
+
+.customertest-imgs {
+  height: 4.8rem;
+  width: 4.8rem;
   border-radius: 50%;
-  height:50px;
-  width: 50px;
-  padding-right: 10px;
+  margin-right: -1.6rem;
+  border: 3px solid rgb(147, 158, 131);
+}
+
+.customer-text {
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 /* End of Products And Testimonials section */
