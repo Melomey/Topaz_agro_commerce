@@ -47,4 +47,7 @@
         border-right: none;
         text-align: center;
       }
-      
+      .catalogue-img{
+        width: 40px;
+        height:40px;
+      }
