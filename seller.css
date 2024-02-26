@@ -12,6 +12,27 @@
     .logo{
         height: 10%;
     }
+    search-bar {
+        display: flex;
+        width: 40%;
+        justify-content: center;
+        margin-top: 250px;
+        border: 7px solid white;
+        background-color: white;
+        border-radius: 5px;
+        margin-left: 400px;
+        margin-right: 400px;
+          
+      }
+      
+      
+      .search-bar input{
+        width: 100%;
+        border: none;
+        outline: none;
+      }
+      
+
     table {
         font-family: arial, sans-serif;
         border-collapse: collapse;
