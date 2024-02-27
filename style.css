@@ -54,9 +54,9 @@ Navigation
 }
 
 .search-bar {
-  /* display: flex; */
+  display: flex;
   width: 40%;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 250px;
   border: 7px solid white;
   background-color: white;
@@ -427,6 +427,7 @@ footer {
   border-radius: 20px;
 }
 
+/* Testimonials */
 .testimonials{
   padding:40px;
 }
@@ -498,7 +499,7 @@ footer {
   width: 50px;
   /* padding-right: 10px; */
 }
-
+/* banner 2 */
 .banner-2 {
   display: flex;
   align-items: center;
