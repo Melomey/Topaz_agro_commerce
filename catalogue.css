@@ -16,22 +16,33 @@ body {
   
   .filter {
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
   }
   
   .filter select {
     padding: 8px;
   }
   
+  .searchInput {
+    padding: 8px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
   .search-filter-divs{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px
 }
 
   .catalog {
     /* display: grid; */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
+    width: 100%
   }
   
   .items {
@@ -88,7 +99,3 @@ div {
   background-color: #45a049;
 }
 
-/* Style the cart icon */
-/* .fa-cart-plus {
-  margin-right: 5px;
-} */
