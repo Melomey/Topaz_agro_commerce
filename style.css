@@ -202,7 +202,7 @@ End of about section
 }
 .column img{
   width: 50%;
-  height:50 %;
+  height:50%;
 }
 /* Clearfix (clear floats) */
 .row::after {
