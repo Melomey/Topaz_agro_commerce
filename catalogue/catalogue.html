@@ -14,16 +14,27 @@
   
   <div class="search-filter-divs">
     <div>
+
+      <input type="text" id="searchInput" onchange="searchItems(event)" placeholder="Search for items...">
+
       <input type="text" id="searchInput" onkeyup="searchItems()" placeholder="Search for items...">
+
     </div>
   
     <div class="filter">
       <label for="seller">Filter by Seller:</label>
       <!-- <select id="category"> -->
+
+        <select id="seller" onchange="filterItems(event)">
+          <option value="all">All</option>
+          <option value="SeaFlavor Market">SeaFlavor Market</option>
+          <option value="Fresh Fields Harvest">Fresh Fields Harvest Co.</option>
+
         <select id="seller" onchange="filterItems()">
           <option value="all">All</option>
           <option value="SeaFlavor Market">SeaFlavor Market</option>
           <option value="Fresh Fields Harvest Co.">Fresh Fields Harvest Co.</option>
+
           <option value="Moo & More Dairy Co.">Moo & More Dairy Co.</option>
           <option value="Herb Garden Grocery">Herb Garden Grocery</option>
           <option value="Legumelight Farms">Legumelight Farms</option>
@@ -46,7 +57,9 @@
         <img src="assets/topaz_agro_jennifer/Catalogue/mackerel-fish-white-background_1011712-30.avif" alt="makerel-fish">
         <h3>Makerel</h3>
         <h5>SeaFlavor Market || $9.99 </h5>
+
         <!-- <button onclick="addToCart('Makerel', 'SeaFlavor Market', 9.99)">Add to Cart</button> -->
+
           <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
         </div>
 
@@ -148,7 +161,9 @@
     <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
 </div>
 
+
 <!-- Additional catalog-items -->
+
 <div class="catalog-item">
     <img src="assets/topaz_agro_jennifer/Catalogue/consulting services.jpg" alt="consulting services">
     <h3>Consulting Services</h3>
@@ -222,6 +237,12 @@
   </div>
 </div>
 
+
+<script src="./main.js"></script>
+</body>
+</html> 
+
 <script src="main.js"></script>
 </body>
 </html>
+
