@@ -477,6 +477,20 @@ footer {
   margin-bottom: 10px;
 }
 
+#cart-badge{
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  color: white;
+  font-size: 15px;
+  border-radius: 50%;
+  font-weight: 400;
+  text-align: center;
+  position: relative;
+  top: -55px;
+  left: 45px;
+}
+
 .testimonial-header{
   margin: auto 10px;
 }
