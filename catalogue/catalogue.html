@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Product Catalog</title>
-<link rel="stylesheet" href="catalogue.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="catalogue.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
 
-<div class="container">
-  <center><h1>Catalogue</h1></center>
-  
-  <div class="search-filter-divs">
-    <div>
+  <div class="container">
+    <center>
+      <h1>Catalogue</h1>
+    </center>
 
-      <input type="text" id="searchInput" onchange="searchItems(event)" placeholder="Search for items...">
+    <div class="search-filter-divs">
+      <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
 
-      <input type="text" id="searchInput" onkeyup="searchItems()" placeholder="Search for items...">
+    <div id="searchResults"></div>
+      <!-- <div>
+        <input type="text" id="searchInput" onchange="searchItems(event)" placeholder="Search for items...">
+      </div> -->
 
-    </div>
-  
-    <div class="filter">
-      <label for="seller">Filter by Seller:</label>
-      <!-- <select id="category"> -->
-
-        <select id="seller" onchange="filterItems(event)">
-          <option value="all">All</option>
-          <option value="SeaFlavor Market">SeaFlavor Market</option>
-          <option value="Fresh Fields Harvest">Fresh Fields Harvest Co.</option>
-
+      <div class="filter">
+        <label for="seller">Filter by Seller:</label>
+        <!-- <select id="category"> -->
+        
         <select id="seller" onchange="filterItems()">
           <option value="all">All</option>
           <option value="SeaFlavor Market">SeaFlavor Market</option>
@@ -43,69 +46,15 @@
           <option value="SproutSource Emporium">SproutSource Emporium</option>
           <option value="FarmWorks Equipment">FarmWorks Equipment</option>
           <option value="AgroAdvantage Consultants">AgroAdvantage Consultants</option>
-      </select>
+        </select>
+      </div>
+
+      <div id="products-list"></div>
+
+
     </div>
 
-    
-  </div>
-  
-  
-  <div id="items" class="catalog">
-    <div class="catalog-grid" id=""catalogGrid>
-
-      <div class="catalog-item">
-        <img src="assets/topaz_agro_jennifer/Catalogue/mackerel-fish-white-background_1011712-30.avif" alt="makerel-fish">
-        <h3>Makerel</h3>
-        <h5>SeaFlavor Market || $9.99 </h5>
-
-        <!-- <button onclick="addToCart('Makerel', 'SeaFlavor Market', 9.99)">Add to Cart</button> -->
-
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-      <div class="catalog-item">
-        <img src="assets/topaz_agro_jennifer/Catalogue/carrot.jpg" alt="carrot">
-        <h3>Carrot</h3>
-        <h5>Fresh Fields Harvest Co. || $9.99</h5>
-        <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-      </div>
-
-      <div class="catalog-item">
-        <img src="assets/topaz_agro_jennifer/Catalogue/egg-crate-white-background_44074-2251.jpg" alt="eggs">
-        <h3>Eggs</h3>
-        <h5>Moo & More Dairy Co. || $2.99</h5>
-        <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-      </div>
-
-      <div class="catalog-item">
-        <img src="assets/topaz_agro_jennifer/Catalogue/wheat seeds.jpg" alt="wheat seeds">
-        <h3>Wheat Seeds</h3>
-        <h5>Legumelight Farms || $5.99</h5>
-        <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-      </div>
-
-      <div class="catalog-item">
-        <img src="assets/topaz_agro_jennifer/Catalogue/pesticides.jpg" alt="pesticide">
-        <h3>Pesticide</h3>
-        <h5>AgroAid Solutions || $15.99</h5>
-        <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-      </div>
-
-      <div class="catalog-item">
-        <img src="assets/topaz_agro_jennifer/Catalogue/tomato seeds.jpg" alt="tomato seeds">
-        <h3>Tomato Seeds</h3>
-        <h5>SproutSource Emporium || $3.99</h5>
-        <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-      </div>
-
-<div class="catalog-item">
-    <img src="assets/topaz_agro_jennifer/Catalogue/pest control.avif" alt="pest control">
-    <h3>Pest Control</h3>
-    <h5>AgroAdvantage Consultants || $49.99</h5>
-    <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-</div>
-
-<div class="catalog-item">
+<!-- <div class="catalog-item">
     <img src="assets/topaz_agro_jennifer/Catalogue/phosphate fertilizer.avif" alt="phosphorus fertilizer">
     <h3>Phosphorus Fertilizer</h3>
     <h5>Fertile Fields Co. || $29.99</h5>
@@ -160,10 +109,10 @@
     <h6>Prime Cuts Butcher || $12.99</h6>
     <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
 </div>
-
+ -->
 
 <!-- Additional catalog-items -->
-
+<!-- 
 <div class="catalog-item">
     <img src="assets/topaz_agro_jennifer/Catalogue/consulting services.jpg" alt="consulting services">
     <h3>Consulting Services</h3>
@@ -235,12 +184,17 @@
 </div>
 
   </div>
-</div>
+</div> -->
 
+
+    <div class="catalog-list">
+      <div class></div>
+    </div>
+
+   
 
 <script src="./catalogue.js"></script>
 </body>
-</html> 
-
+</html>
 
 
