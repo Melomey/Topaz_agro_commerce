@@ -1,10 +1,10 @@
 [
-    { "id": 1, "image_url": "./assets/topaz_agro_jennifer/mackerel-fish-white-background_10111712-39.avif", "name": "Makerel", "seller": "SeaFlavor Market", "price": 9.99, "category": "seafood" },
-    { "id": 2, "image_url": "./assets/Agro_images/carrot", "name": "Carrot", "seller": "Fresh Fields Harvest Co.", "price": 9.99, "category": "vegetables" },
-    { "id": 3, "image_url": "./assets/Agro_images/blackApron", "name": "Black Apron", "seller": "Moo & More Dairy Co.", "price": 2.99, "category": "Working Gear" },
-    { "id": 4, "image_url": "./assets/topaz_agro_jennifer/wheat", "name": "Wheat Seeds", "seller": "Legumelight Farms", "price": 5.99, "category": "seeds" },
-    { "id": 5, "image_url": "./assets/Agro_images/image_placeholder.jpeg", "name": "Pesticide", "seller": "AgroAid Solutions", "price": 15.99, "category": "chemicals" },
-    { "id": 6, "image_url": "./assets/Agro_images/image_placeholder.jpeg", "name": "Tomato Seeds", "seller": "SproutSource Emporium", "price": 3.99, "category": "seeds" },
-    { "id": 7, "image_url": "./assets/Agro_images/image_placeholder.jpeg", "name": "Pest Control", "seller": "AgroAdvantage Consultants", "price": 49.99, "category": "services" },
-    { "id": 8, "image_url": "./assets/Agro_images/image_placeholder.jpeg", "name": "Phosphorus Fertilizer", "seller": "Fertile Fields Co.", "price": 29.99, "category": "fertilizers" }
+    { "id": 1, "image_url": "assets/Agro_images/pepper_seedlocal.webp", "name": "Makerel", "seller": "SeaFlavor Market", "price": 9.99, "category": "seafood" },
+    { "id": 2, "image_url": "./assets/Agro_images/carrot.jpg", "name": "Carrot", "seller": "Fresh Fields Harvest Co.", "price": 9.99, "category": "vegetables" },
+    { "id": 3, "image_url": "./assets/Agro_images/fertilizer.jpg", "name": "Black Apron", "seller": "Moo & More Dairy Co.", "price": 2.99, "category": "Working Gear" },
+    { "id": 4, "image_url": "./assets/Agro_images/chicken_feed3.png", "name": "Wheat Seeds", "seller": "Legumelight Farms", "price": 5.99, "category": "seeds" },
+    { "id": 5, "image_url": "./assets/Agro_images/dwarflemon_plant.jpg", "name": "Pesticide", "seller": "AgroAid Solutions", "price": 15.99, "category": "chemicals" },
+    { "id": 6, "image_url": "./assets/Agro_images/coconut_seedling.jpg", "name": "Tomato Seeds", "seller": "SproutSource Emporium", "price": 3.99, "category": "seeds" },
+    { "id": 7, "image_url": "./assets/Agro_images/piglets_supply.jpeg", "name": "Pest Control", "seller": "AgroAdvantage Consultants", "price": 49.99, "category": "services" },
+    { "id": 8, "image_url": "./assets/Agro_images/bunny_supply.jpg", "name": "Phosphorus Fertilizer", "seller": "Fertile Fields Co.", "price": 29.99, "category": "fertilizers" }
 ]
