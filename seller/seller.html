@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://kit.fontawesome.com/a7ef23dca7.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="seller.css">
@@ -24,41 +24,47 @@
                     height="110px" width="110px">
             </label>
             <ul class="main-nav-list">
-                <li><a class="main-nav-link" href="./index.html">Home</a> </li>
-                <li><a class="main-nav-link"href="#">About</a> </li>
-                <li><a class="main-nav-link" href="./catalogue/catalogue.html">Catalogue</a> </li>
-                <li><a class="main-nav-link" href="./cart-sam/cart.html">Cart</a> </li>
+                <li><a class="main-nav-link" href="../index.html">Home</a> </li>
+                <li><a class="main-nav-link" href="#">About</a> </li>
+                <li><a class="main-nav-link" href="../catalogue/catalogue.html">Catalogue</a> </li>
+                <li><a class="main-nav-link" href="../cart-sam/cart.html">Cart</a> </li>
                 <li><a class="main-nav-link" href="#">FAQs</a> </li>
                 <li> <select class="main-nav-link ">
-                    
+
                         <a>
                             <option>Login As Buyer</option>
                         </a>
-                        <option value="http://127.0.0.1:5500/seller/seller.html#">Login As Seller</option>
-                        
+                        <!-- <option value="http://127.0.0.1:5500/seller/seller.html#">Login As Seller</option> -->
+
                     </select>
                     <button class="logout">Log Out</button>
                 </li>
             </ul>
 
         </nav>
-       <div>  <H2>Welcome Yaya Farms</H2> 
+        <div>
+            <H2>Welcome Yaya Farms</H2>
             <div class="search-bar">
                 <input type="text" placeholder="Search For Products"><button>Search</button>
             </div>
+            <button id="showBtn" onclick="showCreate()" style="background-color: rgb(247, 241, 228);color: #103111; font-weight: 200;"><i
+                    class="fa fa-add" style="color:rgb(7, 110, 7);"></i> Create new item</button>
+
         </div>
-        <!-- <div class="search-bar">
-            <div><input type="text" class=search-bar-input placeholder="Search For Products">
-                <select class="category-selection">
-                    <option>Farm Tools</option>
-                    <option>Seedlings</option>
-                    <option>Seedlings</option>
-                    <option>Livestock younglings</option>
-                    <option>Packaging products </option>
-                </select><button>Search</button>
-            </div> -->
-        </div>
+
     </header>
+    </br>
+    </br>
+    <!-- adding a new item to the catalogue -->
+    <div id="newEntry" class="add-newSection" style="display: none;">
+        <input id="newName" type="text" placeholder="Enter item name">
+        <input id="newPrice" type="number" placeholder="Enter item price">
+        <input id="newQuantity" type="number" placeholder="Quantity in stock">
+        <button onclick="addItem()" style="background-color: #103111; color:white; cursor: pointer;"> Add </button>
+        <button onclick="hideCreate()" style="background-color: wheat; color:rgb(253, 2, 2); cursor: pointer;"> Cancel </button>
+    </div>
+
+
     <section class="seller-catalogue">
 
         <div>
@@ -70,130 +76,12 @@
                     <th>Item Name</th>
                     <th>Price</th>
                     <th>Quantity in stock</th>
-                    <th>Delete</th>
-                    <th>Edit</th>
-                    <th>More</th>
+                    <th><!--Delete--></th>
+                    <!-- <th>Edit</th> -->
+                    <!-- <th>More</th> -->
                 </tr>
-                <tr>
-                    <td>
-                        <div><img class="catalogue-img" src="./assets/Agro_images/big watering can.jpg" alt="watering"
-                                sizes="40px"></div>
-                    </td>
-                    <td>Watering can</td>
-                    <td>GHc: 50.00</td>
-                    <td> 12</td>
-                    <td><i class="fas fa-trash" style="font-size:20px;color:rgb(243, 30, 6);"></i></td>
-                    <td><i class="fa fa-pencil" style="font-size:20px;color:rgb(5, 107, 4);"></i></td>
-                    <td><i class="fa fa-ellipsis-h" style="font-size:20px;color:rgb(8, 85, 23);"></td>
-
-                </tr>
-                <tr>
-                    <td>
-                        <div><img class="catalogue-img" src="./assets/Agro_images/big watering can.jpg" alt="watering"
-                                sizes="40px"></div>
-                    </td>
-                    <td>Watering can</td>
-                    <td>GHc: 50.00</td>
-                    <td> 12</td>
-                    <td><i class="fas fa-trash" style="font-size:20px;color:rgb(243, 30, 6);"></i></td>
-                    <td><i class="fa fa-pencil" style="font-size:20px;color:rgb(5, 107, 4);"></i></td>
-                    <td><i class="fa fa-ellipsis-h" style="font-size:20px;color:rgb(8, 85, 23);"></td>
-
-                </tr>
-                <tr>
-                    <td>
-                        <div><img class="catalogue-img" src="./assets/Agro_images/big watering can.jpg" alt="watering"
-                                sizes="40px"></div>
-                    </td>
-                    <td>Watering can</td>
-                    <td>GHc: 50.00</td>
-                    <td> 12</td>
-                    <td><i class="fas fa-trash" style="font-size:20px;color:rgb(243, 30, 6);"></i></td>
-                    <td><i class="fa fa-pencil" style="font-size:20px;color:rgb(5, 107, 4);"></i></td>
-                    <td><i class="fa fa-ellipsis-h" style="font-size:20px;color:rgb(8, 85, 23);"></td>
-
-                </tr>
-                <tr>
-                    <td>
-                        <div><img class="catalogue-img" src="./assets/Agro_images/big watering can.jpg" alt="watering"
-                                sizes="40px"></div>
-                    </td>
-                    <td>Watering can</td>
-                    <td>GHc: 50.00</td>
-                    <td> 12</td>
-                    <td><i class="fas fa-trash" style="font-size:20px;color:rgb(243, 30, 6);"></i></td>
-                    <td><i class="fa fa-pencil" style="font-size:20px;color:rgb(5, 107, 4);"></i></td>
-                    <td><i class="fa fa-ellipsis-h" style="font-size:20px;color:rgb(8, 85, 23);"></td>
-
-                </tr>
-                <tr>
-                    <td>
-                        <div><img class="catalogue-img" src="./assets/Agro_images/big watering can.jpg" alt="watering"
-                                sizes="40px"></div>
-                    </td>
-                    <td>Watering can</td>
-                    <td>GHc: 50.00</td>
-                    <td> 12</td>
-                    <td><i class="fas fa-trash" style="font-size:20px;color:rgb(243, 30, 6);"></i></td>
-                    <td><i class="fa fa-pencil" style="font-size:20px;color:rgb(5, 107, 4);"></i></td>
-                    <td><i class="fa fa-ellipsis-h" style="font-size:20px;color:rgb(8, 85, 23);"></td>
-
-                </tr>
-                <tr>
-                    <td>
-                        <div><img class="catalogue-img" src="./assets/Agro_images/big watering can.jpg" alt="watering"
-                                sizes="40px"></div>
-                    </td>
-                    <td>Watering can</td>
-                    <td>GHc: 50.00</td>
-                    <td> 12</td>
-                    <td><i class="fas fa-trash" style="font-size:20px;color:rgb(243, 30, 6);"></i></td>
-                    <td><i class="fa fa-pencil" style="font-size:20px;color:rgb(5, 107, 4);"></i></td>
-                    <td><i class="fa fa-ellipsis-h" style="font-size:20px;color:rgb(8, 85, 23);"></td>
-
-                </tr>
-                <tr>
-                    <td>
-                        <div><img class="catalogue-img" src="./assets/Agro_images/big watering can.jpg" alt="watering"
-                                sizes="40px"></div>
-                    </td>
-                    <td>Watering can</td>
-                    <td>GHc: 50.00</td>
-                    <td> 12</td>
-                    <td><i class="fas fa-trash" style="font-size:20px;color:rgb(243, 30, 6);"></i></td>
-                    <td><i class="fa fa-pencil" style="font-size:20px;color:rgb(5, 107, 4);"></i></td>
-                    <td><i class="fa fa-ellipsis-h" style="font-size:20px;color:rgb(8, 85, 23);"></td>
-
-                </tr>
-
-                <tr>
-                    <td>
-                        <div><img class="catalogue-img" src="./assets/Agro_images/big watering can.jpg" alt="watering"
-                                sizes="40px"></div>
-                    </td>
-                    <td>Watering can</td>
-                    <td>GHc: 50.00</td>
-                    <td> 12</td>
-                    <td><i class="fas fa-trash" style="font-size:20px;color:rgb(243, 30, 6);"></i></td>
-                    <td><i class="fa fa-pencil" style="font-size:20px;color:rgb(5, 107, 4);"></i></td>
-                    <td><i class="fa fa-ellipsis-h" style="font-size:20px;color:rgb(8, 85, 23);"></td>
-
-                </tr>
-
-                <tr>
-                    <td>
-                        <div><img class="catalogue-img" src="./assets/Agro_images/big watering can.jpg" alt="watering"
-                                sizes="40px"></div>
-                    </td>
-                    <td>Watering can</td>
-                    <td>GHc: 50.00</td>
-                    <td> 12</td>
-                    <td><i class="fas fa-trash" style="font-size:20px;color:rgb(243, 30, 6);"></i></td>
-                    <td><i class="fa fa-pencil" style="font-size:20px;color:rgb(5, 107, 4);"></i></td>
-                    <td><i class="fa fa-ellipsis-h" style="font-size:20px;color:rgb(8, 85, 23);"></td>
-
-                </tr>
-
+                <tbody id="products">
+                </tbody>
             </table>
 
 
@@ -212,7 +100,7 @@
         </div>
     </section>
 
-
+    <script src="seller.js"></script>
 </body>
 
 </html>
