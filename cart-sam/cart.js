@@ -1,5 +1,5 @@
- // Function to add item to the cart
- const addToCart = (itemName, price, imageUrl) => {
+  // Function to add item to the cart
+  const addToCart = (itemName, price, imageUrl) => {
     const cartItems = document.getElementById('cart-items');
     const totalElement = document.getElementById('total');
     let total = parseFloat(totalElement.innerText);
@@ -39,9 +39,4 @@
     cartItems.appendChild(row);
     total += price;
     totalElement.textContent = total.toFixed(2);
-};
-
-// Function to handle checkout
-const checkout = () => {
-    alert("Thank you for your purchase!");
 };
