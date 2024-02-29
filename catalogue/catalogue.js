@@ -1,4 +1,3 @@
-
 const products = [
   { "id": 1, "name": "Makerel", "seller": "SeaFlavor Market", "img": "../assets/topaz_agro_jennifer/Catalogue/mackerel-fish-white-background_1011712-30.avif", "price": 9.99, "category": "seafood" },
   {"id": 2, "name": "Carrot", "seller": "Fresh Fields Harvest", "img": "../assets/topaz_agro_jennifer/Catalogue/carrot.jpg", "price": 9.99, "category": "vegetables"},
@@ -165,5 +164,3 @@ function addToCart(productId) {
   // You can access the productId to identify which product was added
   console.log('Product added to cart:', productId);
 }
-
-

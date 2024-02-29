@@ -22,30 +22,45 @@
 
 </head>
 
-<body>  
+<body>
     <header class="header">
-    <nav class="main-nav">
-        <label class="logo"><img src="./assets/logos/1_logo_transparent.png" alt="Topaz_agro_commerce" srcset="" height="110px" width="110px">
-        </label>
-        <ul class="main-nav-list">
+        <nav class="main-nav">
+            <label class="logo"><img src="./assets/logos/1_logo_transparent.png" alt="Topaz_agro_commerce" srcset=""
+                    height="110px" width="110px">
+            </label>
 
-            <li><a class="main-nav-link">Home</a> </li>
-            <li><a class="main-nav-link">About</a> </li>
-            <li><a class="main-nav-link">Products</a> </li>
+            <ul class="main-nav-list">
+                <li><a class="main-nav-link in-link-location" href="./index.html">Home</a> </li>
+                <li><a class="main-nav-link" href="./index.html">About</a> </li>
+                <li><a class="main-nav-link" href="./catalogue/catalogue.html">Catalogue</a> </li>
+                <li><a class="main-nav-link" href="./cart-sam/cart.html">Cart</a> </li>
+                <li><a class="main-nav-link" href="#">FAQs</a> </li>
+                <a href="./seller/seller.html">
+                    <button class="nav-btn">Login As Seller</button>
+                </a>
+                <a href="#">
+                    <button class="nav-btn">Login As Buyer</button>
+                </a>
+            </ul>
+            <!-- <ul class="main-nav-list">
+                <li><a class="main-nav-link" href="./index.html">Home</a> </li>
+                <li><a class="main-nav-link" href="#about-landing">About</a> </li>
+                <li><a class="main-nav-link" href="./catalogue/catalogue.html">Catalogue</a> </li>
+                <li><a class="main-nav-link" href="./cart-sam/cart.html">Cart</a> </li>
+                <li><a class="main-nav-link" href="#">FAQs</a> </li>
+                <button onclick="document.location='/seller/seller.html'"> Login As Seller</button>
+                <li>
+                    <select id="nav-select" class="main-nav-link">
+                        <a>
+                            <option>Login As Buyer</option>
+                        </a>
+                        <a href="./seller/seller.html">
+                            <option>Login As Seller</option>
+                        </a>
+                    </select>
 
-            <li><a class="main-nav-link" href="./catalogue.html">Catalogue</a> </li>
-
-            <li><a class="main-nav-link" href="./catalogue/catalogue.html">Catalogue</a> </li>
-
-            <li><a class="main-nav-link">FAQs</a> </li>
-            <li>    
-                <select id="nav-select" class="main-nav-link">
-                    <a> <option>Login As Buyer</option> </a>
-                    <a href="http://127.0.0.1:5500/seller/seller.html#"> <option>Login As Seller</option> </a>
-                </select>
-
-            </li>
-        </ul>
+                </li>
+            </ul> -->
 
 
 
@@ -56,12 +71,14 @@
         </div>
     </header>
 
-        <section class="about">
-            <div class="about-text">
-                <h2><i class="fa-solid fa-leaf" style="color: rgb(2, 56, 2);"></i>    About Us    <i class="fa-solid fa-leaf" style="color: rgb(2, 56, 2);"></i></h2>
-                <p>At TOPAZ Agro Commerce, we are dedicated to revolutionizing the way agro products are bought and sold. With a commitment to quality, reliability, and sustainability, we strive to connect farmers, producers, and buyers in a seamless marketplace experience.</p>
-             </div>
-
+    <section class="about">
+        <div class="about-text">
+            <h2 id="about-landing"><i class="fa-solid fa-leaf" style="color: rgb(2, 56, 2);"></i> About Us <i
+                    class="fa-solid fa-leaf" style="color: rgb(2, 56, 2);"></i></h2>
+            <p>At TOPAZ Agro Commerce, we are dedicated to revolutionizing the way agro products are bought and sold.
+                With a commitment to quality, reliability, and sustainability, we strive to connect farmers, producers,
+                and buyers in a seamless marketplace experience.</p>
+        </div>
         <div class="customer-items">
             <div class="customer-imgs">
                 <img src="./assets/agro_about/customer-1.jpg" alt="Customer photo" />
@@ -93,106 +110,102 @@
             <div>
                 <button style="margin-top: 30px" type="submit" class="btn">Check here!</button>
             </div>
+        </div>
+    </section>
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide">
+                <img id="banner-1Img" src="./assets/Agro_images/banners/chemicals.png" alt="Snow" style="width:100%">
+            </div>
+            <div class="slide">
+                <img id="banner-1Img" src="./assets/Agro_images/banners/seed packets promo.png" alt="Forest"
+                    style="width:100%">
+            </div>
+            <div class="slide">
+                <img id="banner-1Img" src="./assets/Agro_images/banners/gloves.png" alt="Mountains" style="width:100%">
+            </div>
+            <div class="slide">
+                <img id="banner-1Img" src="./assets/Agro_images/banners/suckers.png" alt="Mountains" style="width:100%">
+            </div>
+            <div class="slide">
+                <img id="banner-1Img" src="./assets/Agro_images/banners/packaging.png" alt="Mountains"
+                    style="width:100%">
+            </div>
+            <div class="slide">
+                <img id="banner-1Img" src="./assets/Agro_images/banners/chemicals.png" alt="Snow" style="width:100%">
+            </div>
+            <div class="slide">
+                <img id="banner-1Img" src="./assets/Agro_images/banners/seed packets promo.png" alt="Forest"
+                    style="width:100%">
+            </div>
+            <div class="slide">
+                <img id="banner-1Img" src="./assets/Agro_images/banners/gloves.png" alt="Mountains" style="width:100%">
+            </div>
+            <div class="slide">
+                <img id="banner-1Img" src="./assets/Agro_images/banners/suckers.png" alt="Mountains" style="width:100%">
+            </div>
+        </div>
     </div>
-</section> 
-<div class="row">
-    <div class="column">
-      <img class="banner-1Img" src="./assets/Agro_images/banners/chemicals.png" alt="Snow" style="width:100%">
-    </div>
-    <div class="column">
-      <img class="banner-1Img" src="./assets/Agro_images/banners/seed packets promo.png" alt="Forest" style="width:100%">
-    </div>
-    <div class="column">
-      <img class="banner-1Img" src="./assets/Agro_images/banners/gloves.png" alt="Mountains" style="width:100%">
-    </div>
-    <div class="column">
-        <img class="banner-1Img" src="./assets/Agro_images/banners/suckers.png" alt="Mountains" style="width:100%">
-      </div>
-      <div class="column">
-        <img class="banner-1Img" src="./assets/Agro_images/banners/packaging.png" alt="Mountains" style="width:100%">
-      </div>
-  </div>
-  
 
-<section class="Products-section">
-    <h2 style="text-align: center; padding: 20px;"><i class="fa-solid fa-leaf" style="color: rgb(2, 56, 2);"></i>    Browse Our Products    <i class="fa-solid fa-leaf" style="color: rgb(2, 56, 2);"></i></h2>
-    <h3>Working gear</h3>
-    <div class="Products"> 
-        <div class=pruduct-category>
-            <div class=product-card>                   
-                <img class="product-image" src="./assets/Agro_images/big watering can.jpg" alt="watering can">
-                <div class="product-text">
-                    <div class="product-name">
-                    <h6>Plastic wateringcan 
-                        <button id="buy-now" type="submit" class="buy-btn">
-                            Buy Noww
-                        </button>
-                        <button id="buy-now" type="submit" class="cart-btn">
-                            <i class="fa fa-cart-plus" style="font-size:19x;color:rgb(243, 188, 6);"></i> 
-                        </button>
-                    </h3>
-        
-                    
+    <section class="Products-section">
+        <h2 style="text-align: center; padding: 20px;"><i class="fa-solid fa-leaf" style="color: rgb(2, 56, 2);"></i>
+            Browse Our Products <i class="fa-solid fa-leaf" style="color: rgb(2, 56, 2);"></i></h2>
+
+        <div class="cart-main">
+            <i class="fa fa-cart-shopping" style="font-size: 50px; color: green;"></i>
+            <div id="cart-badge">
+                0
+            </div>
+        </div>
+
+
+        <h3>Featured Items</h3>
+        <div class="Products">
+            <div id="itemsContainer" class=pruduct-category>
+
+            </div>
+            
+        </div>
+        <div><button type="submit" class="btn" id="view">View More Products</button></div>
+    </section>
+        <!-- <h3>All Items (Reference)</h3>
+        <div class="Products">
+            <div class=pruduct-category>
+                <div class=product-card>
+                    <img class="product-image" src="./assets/Agro_images/big watering can.jpg" alt="watering can">
+                    <div class="product-text">
+                        <div class="product-name">
+                            <h6>Plastic wateringcan</h6>
+                            <button id="buy-now" type="submit" class="buy-btn">
+                                Buy Now
+                            </button>
+                            <button id="buy-now" type="submit" class="cart-btn">
+                                <i class="fa fa-cart-plus" style="font-size:19x;color:#f3bc06;"></i>
+                            </button>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
-            <div class=product-card>
-                <img class="product-image" src="./assets/Agro_images/apronjpg.jpg" alt="watering can">
-                <div class="product-text">
-                    <div class="product-name">
-                    <h6>Plastic wateringcan</h3>
-        
-                    <div>
-                        <button id="buy-now" type="submit" class="buy-btn">
-                            Buy Now
-                        </button>
-                        <button id="buy-now" type="submit" class="cart-btn">
-                            <i class="fa fa-cart-plus" style="font-size:19x;color:rgb(243, 188, 6);"></i> 
-                        </button>
-                    </div>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class=product-card>
-                <img class="product-image" src="./assets/Agro_images/wellington_boots.jpg" alt="watering can">
-                <div class="product-text">
-                    <div class="product-name">
-                    <h6>Plastic wateringcan</h3>
-        
-                    <div>
-                        <button id="buy-now" type="submit" class="buy-btn">
-                            Buy Now
-                        </button>
-                        <button id="buy-now" type="submit" class="cart-btn">
-                            <i class="fa fa-cart-plus" style="font-size:19x;color:rgb(243, 188, 6);"></i> 
-                        </button>
-                    </div>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class=product-card>
-                <img class="product-image" src="./assets/Agro_images/protective_maskKN95.jpg" alt="watering can">
-                <div class="product-text">
-                    <div class="product-name">
-                    <h6>Plastic wateringcan</h3>
-        
-                    <div>
-                        <button id="buy-now" type="submit" class="buy-btn">
-                            Buy Now
-                        </button>
-                        <button id="buy-now" type="submit" class="cart-btn">
-                            <i class="fa fa-cart-plus" style="font-size:19x;color:rgb(243, 188, 6);"></i> 
-                        </button>
-                    </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>     
-    </div>
+        </div> -->
+
+        <!-- <h3>Working gear</h3>
+        <div class="Products">
+            <div class=pruduct-category>
+                <div class=product-card>
+                    <img class="product-image" src="./assets/Agro_images/big watering can.jpg" alt="watering can">
+                    <div class="product-text">
+                        <div class="product-name">
+                            <h6>Plastic wateringcan
+                                <button id="buy-now" type="submit" class="buy-btn">
+                                    Buy Noww
+                                </button>
+                                <button id="buy-now" type="submit" class="cart-btn">
+                                    <i class="fa fa-cart-plus" style="font-size:19x;color:rgb(243, 188, 6);"></i>
+                                </button>
+                                </h3>
+
+
+                        </div>
 
                     </div>
                 </div>
@@ -251,9 +264,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <h3>Farm tools & equipment</h3>
+        <!-- <h3>Farm tools & equipment</h3>
         <div class="Products">
             <div class=pruduct-category>
                 <div class=product-card>
@@ -331,9 +344,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <h3>Plants - Seeds & Seedlings</h3>
+        <!-- <h3>Plants - Seeds & Seedlings</h3>
         <div class="Products">
             <div class=pruduct-category>
                 <div class=product-card>
@@ -410,16 +423,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div><button type="submit" class="btn">View More Products</button></div>
-    </section>
-
-
+        
     <section>
         <div class="testimonials">
 
-            <h2><i class="fa-solid fa-leaf" style="color: rgb(2, 56, 2);"></i>Testimonials<i class="fa-solid fa-leaf"
+            <h2 style="text-align: center; padding: 20px;"><i class="fa-solid fa-leaf"
+                    style="color: rgb(2, 56, 2);"></i> Testimonials <i class="fa-solid fa-leaf"
                     style="color: rgb(2, 56, 2);"></i></h2>
 
             <div class="test">
@@ -498,37 +509,38 @@
             <img src="./assets/topaz_agro_jennifer/Miller-Blog-Farm-Innovations.jpg" alt="picture of seedling"height="100%" width="100%">
         </div> -->
 
-        <h2> <i class="fa-solid fa-leaf" style="color: rgb(2, 56, 2);"></i>   Upcoming Discount Sales   <i class="fa-solid fa-leaf" style="color: rgb(2, 56, 2);"></i></h2>
-<!-- <p>Change image every 2 seconds:</p> -->
+        <h2> <i class="fa-solid fa-leaf" style="color: rgb(2, 56, 2);"></i> Upcoming Discount Sales <i
+                class="fa-solid fa-leaf" style="color: rgb(2, 56, 2);"></i></h2>
+        <!-- <p>Change image every 2 seconds:</p> -->
 
-<div class="slideshow-container">
+        <div class="slideshow-container">
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="./assets/Agro_images/banners/salaryWeek.png" style="width:100%">
-  <!-- <div class="text">Caption Text</div> -->
-</div>
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./assets/Agro_images/banners/salaryWeek.png" style="width:100%">
+                <!-- <div class="text">Caption Text</div> -->
+            </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="./assets/Agro_images/banners/unbeatablePrice.png" style="width:100%">
-  <!-- <div class="text">Caption Two</div> -->
-</div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./assets/Agro_images/banners/unbeatablePrice.png" style="width:100%">
+                <!-- <div class="text">Caption Two</div> -->
+            </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="./assets/Agro_images/banners/easterSale.png" style="width:100%">
-  <!-- <div class="text">Caption Three</div> -->
-</div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./assets/Agro_images/banners/easterSale.png" style="width:100%">
+                <!-- <div class="text">Caption Three</div> -->
+            </div>
 
-</div>
-<br>
+        </div>
+        <br>
 
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
 
     </section>
 
@@ -542,13 +554,13 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
-      </footer>  
+    </footer>
 
 
-  
 
-    
-      <script src="landing.js"></script>
+
+
+    <script src="landing.js"></script>
 </body>
 
 </html>
