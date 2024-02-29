@@ -1,6 +1,6 @@
 
 const products = [
-  { "id": 1, "name": "Makerel", "seller": "SeaFlavor Market", "img": "../assets/topaz_agro_jennifer/Catalogue/makerel-fish-white-background", "price": 9.99, "category": "seafood" },
+  { "id": 1, "name": "Makerel", "seller": "SeaFlavor Market", "img": "../assets/topaz_agro_jennifer/Catalogue/mackerel-fish-white-background_1011712-30.avif", "price": 9.99, "category": "seafood" },
   {"id": 2, "name": "Carrot", "seller": "Fresh Fields Harvest", "img": "../assets/topaz_agro_jennifer/Catalogue/carrot.jpg", "price": 9.99, "category": "vegetables"},
   { "id": 3, "name": "Eggs", "seller": "Moo & More Dairy Co.", "img": "../assets/topaz_agro_jennifer/Catalogue/egg-crate-white-background_44074-2251.jpg", "price": 2.99, "category": "dairy" },
   { "id": 4, "name": "Wheat Seeds", "seller": "Legumelight Farms","img": "../assets/topaz_agro_jennifer/Catalogue/wheat seeds.jpg", "price": 5.99, "category": "seeds" },
@@ -27,6 +27,7 @@ const products = [
   { "id": 25, "name": "Chicken", "seller": "Poultry Palace Market","img": "../assets/topaz_agro_jennifer/Catalogue/chicken.jpg", "price": 8.99, "category": "meat" }
 ]
 
+// DISPLAY ALL PRODUCTS
 let items = []
 function mappedData (){
   const pro = products.map((item) => {
@@ -35,10 +36,7 @@ function mappedData (){
   })
 }
 
-
-
 // filter by category
-
 let category = []
 function filterProductsByCategory (category){
   return products.filter(product => product.category === category);
@@ -83,6 +81,37 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
 });
 
 
+function filterItems() {
+  const selectedSeller = document.getElementById("seller").value;
+  const productsList = document.getElementById("products-list");
+  let filteredProducts = [];
+
+  if (selectedSeller === "all") {
+      filteredProducts = products;
+  } else {
+      filteredProducts = products.filter(product => product.seller === selectedSeller);
+  }
+
+  // Display filtered products
+  productsList.innerHTML = "";
+  filteredProducts.forEach(product => {
+      const productElement = document.createElement("div");
+      productElement.innerHTML = `
+          <h3>${product.name}</h3>
+          <p>Seller: ${product.seller}</p>
+          <p>Price: $${product.price}</p>
+          <img src="${product.img}" alt="${product.name}">
+      `;
+      productsList.appendChild(productElement);
+  });
+}
+
+// Initial call to display all products
+filterItems();
+
+
+
+
 // Function to filter products based on the selected seller
 function filterItems() {
   const selectedSeller = document.getElementById('seller').value;
@@ -97,11 +126,8 @@ function filterItems() {
   }
 }
 
-
-
-
+// DISPLAY ALL PRODUCTS
 mappedData()
-
 
 
 function renderProducts() {
