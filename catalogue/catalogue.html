@@ -23,6 +23,8 @@
         <input type="text" id="searchInput" placeholder="Search...">
         <button type="submit">Search</button>
     </form>
+
+    <div id="searchResults"></div>
       <!-- <div>
         <input type="text" id="searchInput" onchange="searchItems(event)" placeholder="Search for items...">
       </div> -->
@@ -30,11 +32,7 @@
       <div class="filter">
         <label for="seller">Filter by Seller:</label>
         <!-- <select id="category"> -->
-        <select id="seller" onchange="filterItems(event)">
-          <option value="all">All</option>
-          <option value="SeaFlavor Market">SeaFlavor Market</option>
-          <option value="Fresh Fields Harvest">Fresh Fields Harvest Co.</option>
-
+        
         <select id="seller" onchange="filterItems()">
           <option value="all">All</option>
           <option value="SeaFlavor Market">SeaFlavor Market</option>
@@ -54,191 +52,13 @@
 
     </div>
 
+    <div class="catalog-list">
+      <div class></div>
+    </div>
 
-    <!-- <div id="items" class="catalog"> -->
-      <div class="catalog-list">
+   
 
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/mackerel-fish-white-background_1011712-30.avif"
-            alt="makerel-fish">
-          <h3>Makerel</h3>
-          <h5>SeaFlavor Market || $9.99 </h5>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/carrot.jpg" alt="carrot">
-          <h3>Carrot</h3>
-          <h5>Fresh Fields Harvest Co. || $9.99</h5>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/egg-crate-white-background_44074-2251.jpg" alt="eggs">
-          <h3>Eggs</h3>
-          <h5>Moo & More Dairy Co. || $2.99</h5>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/wheat seeds.jpg" alt="wheat seeds">
-          <h3>Wheat Seeds</h3>
-          <h5>Legumelight Farms || $5.99</h5>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/pesticides.jpg" alt="pesticide">
-          <h3>Pesticide</h3>
-          <h5>AgroAid Solutions || $15.99</h5>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/tomato seeds.jpg" alt="tomato seeds">
-          <h3>Tomato Seeds</h3>
-          <h5>SproutSource Emporium || $3.99</h5>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/pest control.avif" alt="pest control">
-          <h3>Pest Control</h3>
-          <h5>AgroAdvantage Consultants || $49.99</h5>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/phosphate fertilizer.avif" alt="phosphorus fertilizer">
-          <h3>Phosphorus Fertilizer</h3>
-          <h5>Fertile Fields Co. || $29.99</h5>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/yellow-corn-seeds.avif" alt="corn seeds">
-          <h3>Corn Seeds</h3>
-          <h5>SeedMaster Co. || $7.99</h5>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/cinammon.jpg" alt="cinnamon">
-          <h3>Cinnamon</h3>
-          <h5>Spice World Inc. || $5.99</h5>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/farm-tractor.jpg" alt="tractor">
-          <h3>Tractor</h3>
-          <h5>FarmWorks Equipment || $5000.00</h5>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/smart irrigation system.jpg" alt="smart irrigation system">
-          <h3>Smart Irrigation System</h3>
-          <h5>AgroTech Solutions || $1500.00</h5>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/work boots.avif" alt="work boots">
-          <h3>Work Boots</h3>
-          <h5>FarmGear Inc. || $79.99</h5>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/apples.avif" alt="apples">
-          <h3>Apples</h3>
-          <h5>Fresh Fields Harvest Co. || $1.99</h5>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/beef steak.jpg" alt="beef steak">
-          <h3>Beef Steak</h3>
-          <h6>Prime Cuts Butcher || $12.99</h6>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/consulting services.jpg" alt="consulting services">
-          <h3>Consulting Services</h3>
-          <h6>AgroAdvantage Consultants || $200.00</h6>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/nitrogen fertilizer.jpg" alt="nitrogen fertilizer">
-          <h3>Nitrogen Fertilizer</h3>
-          <h6>AgroAid Solutions || $15.99</h6>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/lettuce-seedlings.avif" alt="lettuce seedlings">
-          <h3>Lettuce Seedlings</h3>
-          <h6>Green Thumb Nursery || $4.99</h6>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/oregano.webp" alt="oregano">
-          <h3>Oregano</h3>
-          <h6>Herb Garden Grocers || $3.99</h6>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/harvester.webp" alt="harvester">
-          <h3>Harvester</h3>
-          <h6>AgroTech Machinery || $10000.00</h6>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/drone.avif" alt="drone">
-          <h3>Drone</h3>
-          <h6>AgroDrone Technologies || $3000.00</h6>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/sun hat.jpg" alt="sun hat">
-          <h3>Sun Hat</h3>
-          <h6>SunSafe Hats || $24.99</h6>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/mango.avif" alt="mangoes">
-          <h3>Mangoes</h3>
-          <h6>Fresh Fields Harvest Co. || $2.49</h6>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/milk.avif" alt="milk">
-          <h3>Milk</h3>
-          <h6>Moo & More Dairy Co. || $3.49</h6>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-        <div class="product">
-          <img src="../assets/topaz_agro_jennifer/Catalogue/chicken.jpg" alt="chicken">
-          <h3>Chicken</h3>
-          <h6>Poultry Palace Market || $8.99</h6>
-          <div><button type="submit" className="btn"> <i class="fa-solid fa-cart-plus"></i>Add to Cart</button></div>
-        </div>
-
-      
-  </div>
-</div>
-
-<script src="catalogue.js"></script>
+<script src="./catalogue.js"></script>
 </body>
 </html>
 

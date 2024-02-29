@@ -1,108 +1,143 @@
-const product = [
-  { name: 'Makerel', seller: 'SeaFlavor Market', img: '', price: 9.99, category: 'seafood' },
-  { name: 'Carrot', seller: 'Fresh Fields Harvest', price: 9.99, category: 'vegetables' },
-  { name: 'Eggs', seller: 'Moo & More Dairy Co.', price: 2.99, category: 'dairy' },
-  { name: 'Wheat Seeds', seller: 'Legumelight Farms', price: 5.99, category: 'seeds' },
-  { name: 'Pesticide', seller: 'AgroAid Solutions', price: 15.99, category: 'chemicals' },
-  { name: 'Tomato Seeds', seller: 'SproutSource Emporium', price: 3.99, category: 'seeds' },
-  { name: 'Pest Control', seller: 'AgroAdvantage Consultants', price: 49.99, category: 'services' },
-  { name: 'Phosphorus Fertilizer', seller: 'Fertile Fields Co.', price: 29.99, category: 'fertilizers' },
-  { name: 'Corn Seeds', seller: 'SeedMaster Co.', price: 7.99, category: 'seeds' },
-  { name: 'Cinnamon', seller: 'Spice World Inc.', price: 5.99, category: 'spices' },
-  { name: 'Tractor', seller: 'FarmWorks Equipment', price: 5000.00, category: 'equipment' },
-  { name: 'Smart Irrigation System', seller: 'AgroTech Solutions', price: 1500.00, category: 'technology' },
-  { name: 'Work Boots', seller: 'FarmGear Inc.', price: 79.99, category: 'clothing' },
-  { name: 'Apples', seller: 'Fresh Fields Harvest', price: 1.99, category: 'fruits' },
-  { name: 'Beef Steak', seller: 'Prime Cuts Butcher', price: 12.99, category: 'meat' },
-  { name: 'Consulting Services', seller: 'AgroAdvantage Consultants', price: 200.00, category: 'services' },
-  { name: 'Nitrogen Fertilizer', seller: 'AgroAid Solutions', price: 15.99, category: 'fertilizers' },
-  { name: 'Lettuce Seedlings', seller: 'Green Thumb Nursery', price: 4.99, category: 'seeds' },
-  { name: 'Oregano', seller: 'Herb Garden Grocers', price: 3.99, category: 'spices' },
-  { name: 'Harvester', seller: 'AgroTech Machinery', price: 10000.00, category: 'equipment' },
-  { name: 'Drone', seller: 'AgroDrone Technologies', price: 3000.00, category: 'technology' },
-  { name: 'Sun Hat', seller: 'SunSafe Hats', price: 24.99, category: 'clothing' },
-{name: 'Mangoes', seller: 'Fresh Fields Harvest', price: 2.49, category:'fruits'},
-  { name: 'Milk', seller: 'Moo & More Dairy Co.', price: 3.49, category: 'dairy' },
-  { name: 'Chicken', seller: 'Poultry Palace Market', price: 8.99, category: 'meat' }
-];
 
-class productFilter {
-  constructor(products) {
-      this.products = products;
-  }
+const products = [
+  { "id": 1, "name": "Makerel", "seller": "SeaFlavor Market", "img": "../assets/topaz_agro_jennifer/Catalogue/makerel-fish-white-background", "price": 9.99, "category": "seafood" },
+  {"id": 2, "name": "Carrot", "seller": "Fresh Fields Harvest", "img": "../assets/topaz_agro_jennifer/Catalogue/carrot.jpg", "price": 9.99, "category": "vegetables"},
+  { "id": 3, "name": "Eggs", "seller": "Moo & More Dairy Co.", "img": "../assets/topaz_agro_jennifer/Catalogue/egg-crate-white-background_44074-2251.jpg", "price": 2.99, "category": "dairy" },
+  { "id": 4, "name": "Wheat Seeds", "seller": "Legumelight Farms","img": "../assets/topaz_agro_jennifer/Catalogue/wheat seeds.jpg", "price": 5.99, "category": "seeds" },
+  { "id": 5, "name": "Pesticide", "seller": "AgroAid Solutions","img": "../assets/topaz_agro_jennifer/Catalogue/pesticides.jpg" , "price": 15.99, "category": "chemicals" },
+  { "id": 6, "name": "Tomato Seeds", "seller": "SproutSource Emporium", "img": "../assets/topaz_agro_jennifer/Catalogue/tomato seeds.jpg", "price": 3.99, "category": "seeds" },
+  { "id": 7, "name": "Pest Control", "seller": "AgroAdvantage Consultants", "img": "../assets/topaz_agro_jennifer/Catalogue/pest control.avif",  "price": 49.99, "category": "services" },
+  { "id": 8, "name": "Phosphorus Fertilizer", "seller": "Fertile Fields Co.", "img": "../assets/topaz_agro_jennifer/Catalogue/phosphate fertilizer.avif",  "price": 29.99, "category": "fertilizers" },
+  { "id": 9, "name": "Corn Seeds", "seller": "SeedMaster Co.", "img": "../assets/topaz_agro_jennifer/Catalogue/yellow-corn-seeds.avif", "price": 7.99, "category": "seeds" },
+  { "id": 10, "name": "Cinnamon", "seller": "Spice World Inc.", "img": "../assets/topaz_agro_jennifer/Catalogue/cinammon.jpg",  "price": 5.99, "category": "spices" },
+  { "id": 11, "name": "Tractor", "seller": "FarmWorks Equipment",  "img": "../assets/topaz_agro_jennifer/Catalogue/farm-tractor.jpg", "price": 5000.00, "category": "equipment" },
+  { "id": 12, "name": "Smart Irrigation System", "seller": "AgroTech Solutions", "img": "../assets/topaz_agro_jennifer/Catalogue/smart irrigation system.jpg", "price": 1500.00, "category": "technology" },
+  { "id": 13, "name": "Work Boots", "seller": "FarmGear Inc.","img": "../assets/topaz_agro_jennifer/Catalogue/work boots.avif", "price": 79.99, "category": "clothing" },
+  { "id": 14, "name": "Apples", "seller": "Fresh Fields Harvest", "img": "../assets/topaz_agro_jennifer/Catalogue/apples.avif", "price": 1.99, "category": "fruits" },
+  { "id": 15, "name": "Beef Steak", "seller": "Prime Cuts Butcher", "img": "../assets/topaz_agro_jennifer/Catalogue/beef steak.jpg", "price": 12.99, "category": "meat" },
+  { "id": 16, "name": "Consulting Services", "seller": "AgroAdvantage Consultants", "img": "../assets/topaz_agro_jennifer/Catalogue/consulting services.jpg", "price": 200.00, "category": "services" },
+  { "id": 17, "name": "Nitrogen Fertilizer", "seller": "AgroAid Solutions", "img": "../assets/topaz_agro_jennifer/Catalogue/nitrogen fertilizer.jpg", "price": 15.99, "category": "fertilizers" },
+  { "id": 18, "name": "Lettuce Seedlings", "seller": "Green Thumb Nursery", "img": "../assets/topaz_agro_jennifer/Catalogue/lettuce-seedlings.avif", "price": 4.99, "category": "seeds" },
+  { "id": 19, "name": "Oregano", "seller": "Herb Garden Grocers", "img": "../assets/topaz_agro_jennifer/Catalogue/oregano.webp", "price": 3.99, "category": "spices" },
+  { "id": 20, "name": "Harvester", "seller": "AgroTech Machinery", "img": "../assets/topaz_agro_jennifer/Catalogue/harvester.webp", "price": 10000.00, "category": "equipment" },
+  { "id": 21, "name": "Drone", "seller": "AgroDrone Technologies","img": "../assets/topaz_agro_jennifer/Catalogue/drone.avif", "price": 3000.00, "category": "technology" },
+  { "id": 22, "name": "Sun Hat", "seller": "SunSafe Hats", "img": "../assets/topaz_agro_jennifer/Catalogue/sun hat.jpg", "price": 24.99, "category": "clothing" },
+  { "id": 23, "name": "Mangoes", "seller": "Fresh Fields Harvest", "img": "../assets/topaz_agro_jennifer/Catalogue/mango.avif", "price": 2.49, "category": "fruits" },
+  { "id": 24, "name": "Milk", "seller": "Moo & More Dairy Co.", "img":"../assets/topaz_agro_jennifer/Catalogue/milk.avif", "price": 3.49, "category": "dairy" },
+  { "id": 25, "name": "Chicken", "seller": "Poultry Palace Market","img": "../assets/topaz_agro_jennifer/Catalogue/chicken.jpg", "price": 8.99, "category": "meat" }
+]
 
-  // filterByCategory(category) {
-  //     return this.products.filter(product => product.category === category);
-  // }
+let items = []
+function mappedData (){
+  const pro = products.map((item) => {
+   return items.push(item )
+    // console.log('hhhhh', item)
+  })
+}
 
-  filterByName(name) {
 
-      const product = this.products.filter(product => product.name.toLowerCase() === name.toLowerCase());
-      console.log("prrrr",product)
-      return product
-  }
 
-  filterBySeller(seller) {
-      return this.products.filter(product => product.seller === seller);
-  }
+// filter by category
 
-  search(term) {
-      return this.products.filter(product => product.name.toLowerCase().includes(term.toLowerCase()) || product.category.toLowerCase().includes(term.toLowerCase()) || product.seller.toLowerCase().includes(term.toLowerCase()));
+let category = []
+function filterProductsByCategory (category){
+  return products.filter(product => product.category === category);
+}
+
+console.log('category',category)
+
+function displayProducts(searchTerm) {
+  const searchResults = products.filter(product =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    product.category.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  // Clear previous search results
+  document.getElementById('searchResults').innerHTML = '';
+
+  // Display search results
+  const resultsContainer = document.getElementById('searchResults');
+  if (searchResults.length > 0) {
+    searchResults.forEach(product => {
+      const productElement = document.createElement('div');
+      productElement.classList.add('product');
+      productElement.innerHTML = `
+        <img src="${product.img}" alt="${product.name}">
+        <h3>${product.name}</h3>
+        <p>Price: $${product.price}</p>
+        <p>Seller: ${product.seller}</p>
+      `;
+      resultsContainer.appendChild(productElement);
+    });
+  } else {
+    const noResultsElement = document.createElement('p');
+    noResultsElement.textContent = 'No matching products found.';
+    resultsContainer.appendChild(noResultsElement);
   }
 }
 
-let productFilter = new ProductFilter(products);
-
-document.addEventListener('DOMContentLoaded', function() {
-  const searchForm = document.getElementById('searchForm');
-  const searchInput = document.getElementById('searchInput');
-  const catalogGrid = document.querySelector('.product-list');
-
-  searchForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting
-
-    const searchTerm = searchInput.value.trim().toLowerCase();
-
-    // Use the search method to filter products based on the search term
-    let searchResults = productFilter.search(searchTerm);
-
-    // Clear the product list
-    productList.innerHTML = '';
-
-    // Add the search results to the product list
-    for (let product of searchResults) {
-      productList.innerHTML += `
-        <div class="product">
-          <img src="../asset/image/${product.name.toLowerCase().replace(' ', '_')}.png/jpg/avif/wepd" alt="${product.name}">
-          <h2>${product.name}</h2>
-          <p>${product.price}</p>
-          <a href="cart.html" class="cart-icon">🛒</a>
-        </div>
-      `;
-    }
-  });
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const searchTerm = document.getElementById('searchInput').value;
+  displayProducts(searchTerm);
 });
 
 
-// function searchItems(event) {
-  // take what the user typed
-  // const userInput = event.target.value;
-  // filter products with what the user typed
-// const filteredProducts = products.filter(product => product.name.includes(userInput));
-  // create a div for every product
-  // insert all result into catalogue grid
-// }
+// Function to filter products based on the selected seller
+function filterItems() {
+  const selectedSeller = document.getElementById('seller').value;
 
-// function filterBySeller() {
-  // take the seller the user selected 
-  // const filteredItems = 
-  // filter products by seller
-  // create a div for every product
-  // insert all results into a catalogue grid
-// }
+  // If "All" is selected, render all products
+  if (selectedSeller === 'all') {
+    renderProducts(products);
+  } else {
+    // Otherwise, filter products by the selected category
+    const filteredProducts = products.filter(product => product.seller === selectedSeller);
+    renderProducts(filteredProducts);
+  }
+}
 
-// function addToCart() {
-  // when button is clicked it should add the item to the cart 
-// }
+
+
+
+mappedData()
+
+
+
+function renderProducts() {
+  const productList = document.querySelector('.catalog-list');
+
+  if (!productList) {
+    console.error("Product list container not found!");
+    return;
+  }
+
+  products.map(product => {
+    const productElement = document.createElement('div');
+    productElement.classList.add('product');
+
+    productElement.innerHTML = `
+    <img src="${product.img}" alt="${product.name}">
+      <h2>${product.name}</h2>
+      <p>Seller: ${product.seller}</p>
+      <p>Price: $${product.price}</p>
+      <p>Category: ${product.category}</p>
+      <button onclick="addToCart(${product.id})">Add to Cart</button>
+    `;
+
+  
+    productList.appendChild(productElement);
+  });
+}
+
+// Call the function to render products when the page loads
+document.addEventListener('DOMContentLoaded', renderProducts);
+
+// Function to add a product to the cart
+function addToCart(productId) {
+  // This is where you can implement adding the product to the cart
+  // You can access the productId to identify which product was added
+  console.log('Product added to cart:', productId);
+}
 
 
