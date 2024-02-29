@@ -58,21 +58,18 @@ cart
 
  /* Basic styling */
  
-.container {
+ .container {
   max-width: 800px;
   margin: 20px auto;
   padding: 0 20px;
 }
-
 h1 {
   text-align: center;
 }
-
 .cart {
   border-collapse: collapse;
   width: 100%;
 }
-
 .cart th, .cart td {
   border: 1px solid #ddd;
   padding: 8px;
@@ -100,6 +97,7 @@ h1 {
   border-radius: 4px;
   cursor: pointer;
   float: right;
+  text-decoration: none; /* Remove underline from the link */
 }
 .checkout-btn:hover {
   background-color: #45a049;
