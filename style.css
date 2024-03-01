@@ -36,7 +36,7 @@ Navigation
 .main-nav-link{
   color: #fff;
    
-}
+} 
 
 .in-link-location{
   color: #0E6810;
@@ -44,7 +44,7 @@ Navigation
 
 .nav-btn{
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 8px;
   background-color: #fff;
   border: 2px solid #0E6810;
   cursor: pointer;
@@ -248,7 +248,7 @@ End of about section
 
 .slide-track{
   display:flex;
-  width: calc(150px * 10);
+  width: calc(240px * 16);
   animation: scroll 30s linear infinite;
 
 }
