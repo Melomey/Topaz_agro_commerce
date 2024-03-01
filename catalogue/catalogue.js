@@ -35,6 +35,79 @@ function mappedData (){
   })
 }
 
+
+// DISPLAY ALL PRODUCTS
+mappedData()
+
+console.log(items);
+
+function renderProducts() {
+  const productList = document.querySelector('.catalog-list');
+
+  if (!productList) {
+    console.error("Product list container not found!");
+    return;
+  }
+
+  products.map(product => {
+    const productElement = document.createElement('div');
+    productElement.classList.add('product');
+
+    productElement.innerHTML = `
+    <img src="${product.img}" alt="${product.name}">
+      <h4>${product.name}</h4>
+      <p>Seller: ${product.seller}</p>
+      <p>Price: $${product.price}</p>
+      <p>Category: ${product.category}</p>
+      <button onclick="addToCart(1)">Add to Cart</button>
+    `;
+{/* <button onclick="addToCart(1)">Add to Cart</button> */}
+  
+    productList.appendChild(productElement);
+    
+  });
+}
+
+// Call the function to render products when the page loads
+document.addEventListener('DOMContentLoaded', renderProducts);
+
+
+// Function to add a product to the cart ----------------NEW ADDITIONS
+// Initialize an empty shopping cart
+let shoppingCart = [];
+
+function addToCart(productId) {
+  console.log('Adding product with ID:', productId);
+
+  // Find the product by its id
+  const productToAdd = products.find(product => product.id === productId);
+
+  // Log the productToAdd to see if it's found
+  console.log('Product found:', productToAdd);
+
+  // If the product is found, add it to the shopping cart
+  if (productToAdd) {
+    shoppingCart.push(productToAdd);
+    updateCartBadge();
+    // Store cart items in localStorage
+        localStorage.setItem('cartItems', JSON.stringify(shoppingCart));
+  } else {
+    console.error('Product not found:', productId);
+  }
+}
+
+// Function to update the cart badge
+function updateCartBadge() {
+  const cartBadge = document.getElementById('cart-badge');
+  if (cartBadge) {
+    cartBadge.textContent = shoppingCart.length;
+  }
+}                                           
+                                              //  END OF NEW ADDITIONS.     RECHECK DISPLAY ALL PRODUCTS-fixed
+
+
+
+
 // filter by category
 let category = []
 function filterProductsByCategory (category){
@@ -123,44 +196,4 @@ function filterItems() {
     const filteredProducts = products.filter(product => product.seller === selectedSeller);
     renderProducts(filteredProducts);
   }
-}
-
-// DISPLAY ALL PRODUCTS
-mappedData()
-
-
-function renderProducts() {
-  const productList = document.querySelector('.catalog-list');
-
-  if (!productList) {
-    console.error("Product list container not found!");
-    return;
-  }
-
-  products.map(product => {
-    const productElement = document.createElement('div');
-    productElement.classList.add('product');
-
-    productElement.innerHTML = `
-    <img src="${product.img}" alt="${product.name}">
-      <h4>${product.name}</h4>
-      <p>Seller: ${product.seller}</p>
-      <p>Price: $${product.price}</p>
-      <p>Category: ${product.category}</p>
-      <button onclick="addToCart(${product.id})">Add to Cart</button>
-    `;
-
-  
-    productList.appendChild(productElement);
-  });
-}
-
-// Call the function to render products when the page loads
-document.addEventListener('DOMContentLoaded', renderProducts);
-
-// Function to add a product to the cart
-function addToCart(productId) {
-  // This is where you can implement adding the product to the cart
-  // You can access the productId to identify which product was added
-  console.log('Product added to cart:', productId);
 }
