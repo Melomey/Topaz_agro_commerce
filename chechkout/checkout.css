@@ -80,14 +80,19 @@
   filter: drop-shadow(0 0 1px #000);
 }
 
-.container form .submit-btn {
+/*.container form*/
+.submit-btn {
   width: 100%;
-  padding: 12px;
-  font-size: 17px;
-  background: #27ae60;
-  color: #fff;
-  margin-top: 5px;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: green;
+  color: white;
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Add rounded corners */
+  border: none; /* Remove border */
   cursor: pointer;
+  font-size: 16px;
 }
 
 .container form .submit-btn:hover {
