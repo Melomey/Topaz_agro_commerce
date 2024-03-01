@@ -111,6 +111,7 @@ body {
 .search-area{
   padding: 40px;
   display: inline;
+  
 
 }
   .filtered-item{
@@ -143,8 +144,8 @@ body {
   .product img {
     size: 50%;
     border-radius: 10px;
-    height: 50%;
-    width: 50%;
+    height: 40%;
+    width: 40%;
     
   }
   button{

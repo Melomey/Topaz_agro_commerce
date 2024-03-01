@@ -31,6 +31,7 @@
   background-color: #103111;
   color: antiquewhite;
   padding:unset;
+  list-style: none;
 
 }
 
@@ -43,6 +44,11 @@
   display: inline-block;
   line-height: 80px;
   margin: 0 20px;
+}
+
+.main-nav-list a {
+  text-decoration: none;
+  color: white;
 }
 
 button {
