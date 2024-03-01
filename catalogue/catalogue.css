@@ -11,7 +11,45 @@ body {
     margin: 0;
     padding: 0;
   }
+
+  .logo img {
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    position: inherit;
   
+  }
+  
+  nav {
+    /* margin-left: 400px; */
+    background-color: #103111;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav .main-nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: none;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  nav .fa-solid,
+  .fa-regular {
+    color: rgb(192, 190, 76);
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+  }
+
   .container {
     margin: 20px auto;
     padding: 0 40px;
@@ -43,7 +81,22 @@ body {
     margin-bottom: 20px;
 }
 
-  /* .catalog {
+#cart-badge{
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  color: white;
+  font-size: 15px;
+  border-radius: 50%;
+  font-weight: 400;
+  text-align: center;
+  position: relative;
+  top: -55px;
+  left: 45px;
+  
+}
+
+  /* .catalog-item {
     
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
@@ -55,32 +108,59 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
   } */
+.search-area{
+  padding: 40px;
+  display: inline;
+
+}
+  .filtered-item{
+    padding: 40px;
+  }
 
   .catalog-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 17px;
-    grid-row-gap: 17px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
     justify-content: center;
+    padding: 20px;
     }
   
   .product {
     width: 200px;
     /* margin: 10px; */
     padding: 10px;
-    border: 3px solid #206e18;
+    border: 0.5px solid #89ce82;
     text-align: center;
     border-radius: 12px;
+    background-color: #b4f5b7;
+    height: 100%;
+    filter: drop-shadow(-2px 0px 3px #b3b3b3);
+  
   }
   
   .product img {
     size: 50%;
-    border-radius: 20%;
-    height: 30%;
+    border-radius: 10px;
+    height: 50%;
     width: 50%;
+    
   }
-
+  button{
+    padding:10px;
+    background-color: #103111;
+    color: white;
+    border-radius: 8px;
+  }
+#seller{
+  padding:10px;
+  border-radius: 8px;
+}
+#searchForm input{
+  padding:10px;
+  border-radius: 8px;
+}
   /* Style the button container */
 div {
   text-align: center;
