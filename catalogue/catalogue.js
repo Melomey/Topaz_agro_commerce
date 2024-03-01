@@ -60,7 +60,7 @@ function displayProducts(searchTerm) {
       productElement.classList.add('product');
       productElement.innerHTML = `
         <img src="${product.img}" alt="${product.name}">
-        <h3>${product.name}</h3>
+        <h4>${product.name}</h4>
         <p>Price: $${product.price}</p>
         <p>Seller: ${product.seller}</p>
       `;
@@ -143,7 +143,7 @@ function renderProducts() {
 
     productElement.innerHTML = `
     <img src="${product.img}" alt="${product.name}">
-      <h2>${product.name}</h2>
+      <h4>${product.name}</h4>
       <p>Seller: ${product.seller}</p>
       <p>Price: $${product.price}</p>
       <p>Category: ${product.category}</p>

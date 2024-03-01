@@ -1,6 +1,12 @@
 let allItems = [];
 let cartItems = [];
 
+let allItemsCopy = [];
+let searchResults = [];
+
+const searchInput = document.getElementById('searchInput');
+const myDropdown = document.getElementById('myDropdown');
+
 function loadProducts(){
   // Fetch 
   fetch('products.json')
@@ -12,7 +18,7 @@ function loadProducts(){
       });
 
       allItems = data;
-
+      allItemsCopy = [...allItems];
       processItems();
     })
     .catch(error => console.error('Error fetching JSON:', error));
@@ -25,6 +31,35 @@ function clearItemList() {
   }
 }
 
+function clearSearchList(){
+  while (myDropdown.firstChild) {
+    myDropdown.removeChild(myDropdown.firstChild);
+  }
+}
+
+function findItem(){
+  searchResults = [];
+
+  let keyword = searchInput.value.toLowerCase();
+
+  if (keyword !== '') {
+    myDropdown.style.display = 'block';
+    clearSearchList();
+
+    allItemsCopy.forEach(item => {
+      if (item.name.toLowerCase().includes(keyword)) {
+        searchResults.push(item);
+        const htmlItem = document.createElement('a');
+        htmlItem.href = './catalogue/catalogue.html';
+        htmlItem.textContent = item.name;
+
+        myDropdown.appendChild(htmlItem);
+      }
+    });
+  } else {
+    myDropdown.style.display = 'none';
+  }  
+}
 function processItems(){
 
   allItems.forEach((item, index) => {
@@ -60,6 +95,7 @@ function processItems(){
   
     const productNameDiv = document.createElement('div');
     productNameDiv.classList.add('product-name');
+    productNameDiv.style.display = 'inline-block';
     productNameDiv.appendChild(itemName);
     productNameDiv.appendChild(buyNowButton);
     productNameDiv.appendChild(cartButton);
@@ -99,9 +135,22 @@ function addToCart(item){
   let cartBadge = document.getElementById("cart-badge");
   cartBadge.innerHTML = cartItems.length;
 
-
+  // saveCart(cartItems);
   clearItemList();
   processItems();
+}
+
+function saveCart(data){
+  fetch('cart.json', {
+    method: 'PUT', // or 'POST' depending on your server setup
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+  .then(response => response.json())
+  .then(updatedData => console.log('JSON file updated:', updatedData))
+  .catch(error => console.error('Error updating the JSON file:', error));
 }
 
 // CAROUSEL
