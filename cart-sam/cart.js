@@ -40,3 +40,4 @@
     total += price;
     totalElement.textContent = total.toFixed(2);
 };
+
